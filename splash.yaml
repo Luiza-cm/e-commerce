@@ -8,6 +8,6 @@ flutter_native_splash:
     color: "#FFFFFF"
     color_dark: "#272727"
     image: assets/logos/splash-light.jpg
-    image_dark: assets/logos/splash-darkq.jpg
+    image_dark: assets/logos/splash-dark.jpg
 
   web: false
