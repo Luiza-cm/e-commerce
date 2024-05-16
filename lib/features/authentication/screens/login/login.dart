@@ -1,44 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learnings/utils/constants/image_strings.dart';
+import 'package:flutter_learnings/common/styles/spacing_styles.dart';
+import 'package:flutter_learnings/common/widgets/login_signup/form_divider.dart';
+import 'package:flutter_learnings/common/widgets/login_signup/social_buttons.dart';
 import 'package:flutter_learnings/utils/constants/sizes.dart';
-import 'package:flutter_learnings/utils/constants/text_strings.dart';
-import 'package:flutter_learnings/utils/helpers/helper_functions.dart';
-import 'package:flutter_learnings/utils/theme/custom_themes/text_theme.dart';
+import 'widgets/login_form.dart';
+import 'widgets/login_header.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = AppHelperFunctions.isDarkMode(context);
-
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(
-              top: AppSizes.appBarHeight,
-              left: AppSizes.defaultSpace,
-              bottom: AppSizes.defaultSpace,
-              right: AppSizes.defaultSpace
-            ),
+          padding: SpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
               /// Logo, title and subtitle
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Image(
-                      image: AssetImage(dark
-                          ? AppImages.darkAppLogo
-                          : AppImages.lightAppLogo),
-                      height: 150,
-                  ),
-                  Text(AppTexts.loginTitle, style: Theme.of(context).textTheme.headlineMedium,),
-                  const SizedBox(height: AppSizes.sm,),
-                  Text(AppTexts.loginSubTitle, style: Theme.of(context).textTheme.bodyMedium,),
+              LoginHeader(),
 
-                ],
-              )
+              /// Form
+              LoginForm(),
+
+              ///Divider
+              LoginFormDivider(),
+
+              SizedBox(height: AppSizes.spaceBtwSections),
+              /// Footer
+              SocialButtons(),
             ],
           ),
         ),
@@ -46,3 +36,10 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+
+

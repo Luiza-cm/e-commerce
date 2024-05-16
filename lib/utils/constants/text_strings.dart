@@ -49,5 +49,5 @@ import 'package:flutter/material.dart';
   static const String confirmEmailSubTitle = "Congratulations! Your Account Awaits: Verify Your E-mail to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers";
   static const String emailNotReceivedMessage = "Didn't get the e-mail? Check your junk/spam or resend it";
   static const String yourAccountCreatedTitle = "Your account was successful";
-  static const String yourAccountCreatedSubtitle = "Welcome to your ultimate Shopping Destination: Your Account is Createe.";
+  static const String yourAccountCreatedSubtitle = "Welcome to your ultimate Shopping Destination: Your Account is Created. Unleash the Joy of Seamless Online Shopping!";
   }
