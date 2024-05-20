@@ -6,7 +6,7 @@ class AppImages {
   static const String lightAppLogo = "assets/logos/splash-light.jpg";
 
   // Social logos
-  static const String google = "assets/logos/google-icon.png";
+  static const String google = "assets/logos/google-icon.jpg";
   static const String facebook = "assets/logos/facebook-icon.png";
 
   // OnBoarding Images

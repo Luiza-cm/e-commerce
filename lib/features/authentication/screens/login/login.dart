@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
               ///Divider
               LoginFormDivider(),
 
-              SizedBox(height: AppSizes.spaceBtwSections),
+              SizedBox(height: AppSizes.spaceBtwItems),
               /// Footer
               SocialButtons(),
             ],
