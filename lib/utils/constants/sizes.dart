@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class AppSizes {
   // Padding and margin sizes
   static const double xs = 4.0;
