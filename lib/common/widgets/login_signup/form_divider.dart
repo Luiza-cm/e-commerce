@@ -4,10 +4,12 @@ import 'package:flutter_learnings/utils/constants/text_strings.dart';
 import 'package:flutter_learnings/utils/helpers/helper_functions.dart';
 import 'package:get/get.dart';
 
-class LoginFormDivider extends StatelessWidget {
-  const LoginFormDivider({
-    super.key,
+class FormDivider extends StatelessWidget {
+  const FormDivider({
+    super.key, required this.dividerText,
   });
+
+  final String dividerText;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +27,15 @@ class LoginFormDivider extends StatelessWidget {
           ),
         ),
         Text(
-          AppTexts.orSignInWith.capitalize!,
+          dividerText,
           style: Theme.of(context).textTheme.labelMedium,
         ),
         Flexible(
           child: Divider(
             color: dark ? MyColors.darkGrey : MyColors.grey,
             thickness: 0.5,
-            indent: 60,
-            endIndent: 5,
+            indent: 5,
+            endIndent: 60,
           ),
         ),
       ],

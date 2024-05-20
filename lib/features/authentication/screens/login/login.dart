@@ -3,6 +3,8 @@ import 'package:flutter_learnings/common/styles/spacing_styles.dart';
 import 'package:flutter_learnings/common/widgets/login_signup/form_divider.dart';
 import 'package:flutter_learnings/common/widgets/login_signup/social_buttons.dart';
 import 'package:flutter_learnings/utils/constants/sizes.dart';
+import 'package:flutter_learnings/utils/constants/text_strings.dart';
+import 'package:get/get.dart';
 import 'widgets/login_form.dart';
 import 'widgets/login_header.dart';
 
@@ -11,24 +13,24 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
           padding: SpacingStyle.paddingWithAppBarHeight,
           child: Column(
             children: [
               /// Logo, title and subtitle
-              LoginHeader(),
+              const LoginHeader(),
 
               /// Form
-              LoginForm(),
+              const LoginForm(),
 
               ///Divider
-              LoginFormDivider(),
+              FormDivider(dividerText: AppTexts.orSignInWith.capitalize!),
 
-              SizedBox(height: AppSizes.spaceBtwItems),
+              const SizedBox(height: AppSizes.spaceBtwItems),
               /// Footer
-              SocialButtons(),
+              const SocialButtons(),
             ],
           ),
         ),

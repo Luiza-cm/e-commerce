@@ -33,6 +33,7 @@ import 'package:flutter/material.dart';
   static const String iAgreeTo = "I agree to";
   static const String privacyPolicy = "Privacy Policy";
   static const String termsOfUse = "Terms of use";
+  static const String and = "and";
   static const String verificationCode = "Verification code";
   static const String resendEmail = "Resend E-mail";
   static const String resendEmailIn = "Resend email in";
