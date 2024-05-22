@@ -38,6 +38,8 @@ import 'package:flutter/material.dart';
   static const String resendEmail = "Resend E-mail";
   static const String resendEmailIn = "Resend email in";
   static const String continueText = "Continue";
+  static const String submit = "Submit";
+  static const String done = "Done";
 
   // Authentication Headings Texts
   static const String loginTitle = "Welcome back";
