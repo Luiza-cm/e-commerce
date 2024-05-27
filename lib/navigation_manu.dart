@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learnings/features/shop/screens/home/home.dart';
 import 'package:flutter_learnings/utils/constants/colors.dart';
 import 'package:flutter_learnings/utils/helpers/helper_functions.dart';
 import 'package:get/get.dart';
@@ -18,9 +19,12 @@ class NavigationMenu extends StatelessWidget {
           height: 80,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (index) => controller.selectedIndex.value = index,
+          onDestinationSelected: (index) =>
+              controller.selectedIndex.value = index,
           backgroundColor: darkMode ? MyColors.black : MyColors.white,
-          indicatorColor: darkMode ? MyColors.white.withOpacity(0.1) : MyColors.black.withOpacity(0.1),
+          indicatorColor: darkMode
+              ? MyColors.white.withOpacity(0.1)
+              : MyColors.black.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: 'Home'),
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
@@ -29,7 +33,9 @@ class NavigationMenu extends StatelessWidget {
           ],
         ),
       ),
-      body: Obx(() => controller.screens[controller.selectedIndex.value],),
+      body: Obx(
+        () => controller.screens[controller.selectedIndex.value],
+      ),
     );
   }
 }
@@ -37,5 +43,16 @@ class NavigationMenu extends StatelessWidget {
 class NavigationController extends GetxController {
   final Rx<int> selectedIndex = 0.obs;
 
-  final screens = [Container(color: Colors.green,), Container(color: Colors.blue,), Container(color: Colors.deepPurple,), Container(color: Colors.orange,)];
+  final screens = [
+    const HomeScreen(),
+    Container(
+      color: Colors.blue,
+    ),
+    Container(
+      color: Colors.deepPurple,
+    ),
+    Container(
+      color: Colors.orange,
+    )
+  ];
 }
