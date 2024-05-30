@@ -18,4 +18,7 @@ class AppImages {
   static const String verifyEmailIllustration = "assets/images/animations/email-verification.gif";
   static const String successfulVerifiedEmail = "assets/images/animations/success-verification.gif";
 
+  // Category Icons
+  static const String bowlingIcon = "assets/icons/categories/icons8-bowling-64.png";
+
 }

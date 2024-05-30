@@ -21,6 +21,7 @@ class AppPrimaryHeaderContainer extends StatelessWidget {
           height: 400,
           child: Stack(
             children: <Widget>[
+              /// Background custom shape
               Positioned(
                 top: -150,
                 right: -250,
