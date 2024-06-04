@@ -16,7 +16,7 @@ class AppHomeCategories extends StatelessWidget {
         itemCount: 6,
         scrollDirection: Axis.horizontal,
         itemBuilder: (_, index) {
-          return AppVerticalImageText(image: AppImages.bowlingIcon, title: 'Shoes', onTap: () {});
+          return AppVerticalImageText(image: AppImages.shoeIcon, title: 'Shoes', onTap: () {});
         },
       ),
     );
