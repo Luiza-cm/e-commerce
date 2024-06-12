@@ -32,4 +32,16 @@ class AppImages {
   static const String promoBanner2 = "assets/images/banners/banner-promo2.jpg";
   static const String promoBanner3 = "assets/images/banners/banner-promo3.jpg";
 
+  // Products
+  static const String productImage1 = "assets/images/product_images/product-1.png";
+  static const String productImage2 = "assets/images/product_images/product-2.png";
+  static const String productImage3 = "assets/images/product_images/product-3.png";
+  static const String productImage4 = "assets/images/product_images/product-4.png";
+  static const String productImage5 = "assets/images/product_images/product-5.png";
+  static const String productImage6 = "assets/images/product_images/product-6.png";
+  static const String productImage7 = "assets/images/product_images/product-7.png";
+  static const String productImage8 = "assets/images/product_images/product-8.png";
+  static const String productImage9 = "assets/images/product_images/product-9.png";
+  static const String productImage10 = "assets/images/product_images/product-10.png";
+
 }

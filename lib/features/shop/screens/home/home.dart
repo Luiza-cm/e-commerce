@@ -6,6 +6,7 @@ import 'package:flutter_learnings/common/widgets/custom_shapes/containers/primar
 import 'package:flutter_learnings/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:flutter_learnings/common/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:flutter_learnings/common/widgets/images/rounded_image.dart';
+import 'package:flutter_learnings/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_learnings/common/widgets/texts/section_heading.dart';
 import 'package:flutter_learnings/utils/constants/colors.dart';
 import 'package:flutter_learnings/utils/constants/image_strings.dart';
@@ -59,11 +60,17 @@ class HomeScreen extends StatelessWidget {
           /// Body - White container
           Padding(
             padding: EdgeInsets.all(AppSizes.defaultSpace),
-            child: PromoSlider(
-              banners: [
-                AppImages.promoBanner1,
-                AppImages.promoBanner2,
-                AppImages.promoBanner3
+            child: Column(
+              children: [
+                PromoSlider(
+                  banners: [
+                    AppImages.promoBanner1,
+                    AppImages.promoBanner2,
+                    AppImages.promoBanner3
+                  ],
+                ),
+                SizedBox(height: AppSizes.spaceBtwSections),
+                ProductCardVertical(),
               ],
             ),
           )
