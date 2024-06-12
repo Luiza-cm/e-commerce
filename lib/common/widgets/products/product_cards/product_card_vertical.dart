@@ -21,10 +21,9 @@ class ProductCardVertical extends StatelessWidget {
       width: 180,
       padding: const EdgeInsets.all(1),
       decoration: BoxDecoration(
-        boxShadow: [ShadowStyle.verticalProductShadow],
-        borderRadius: BorderRadius.circular(AppSizes.productImageRadius),
-        color: dark ? MyColors.darkerGrey : MyColors.white
-      ),
+          boxShadow: [ShadowStyle.verticalProductShadow],
+          borderRadius: BorderRadius.circular(AppSizes.productImageRadius),
+          color: dark ? MyColors.darkerGrey : MyColors.white),
       child: Column(
         children: [
           /// Thumbnail, Wishlist Button, Discount Tag
@@ -35,7 +34,8 @@ class ProductCardVertical extends StatelessWidget {
             child: Stack(
               children: [
                 /// Thumbnail image
-                const RoundedImage(imageUrl: AppImages.productImage1, applyImageRadius: true),
+                const RoundedImage(
+                    imageUrl: AppImages.productImage1, applyImageRadius: true),
 
                 /// Sale tag
                 Positioned(
@@ -43,25 +43,33 @@ class ProductCardVertical extends StatelessWidget {
                   child: RoundedContainer(
                     radius: AppSizes.sm,
                     backgroundColor: MyColors.secondary.withOpacity(0.8),
-                    padding: const EdgeInsets.symmetric(horizontal: AppSizes.sm, vertical: AppSizes.xs),
-                    child: Text('25%', style: Theme.of(context).textTheme.labelLarge!.apply(color: MyColors.black),),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: AppSizes.sm, vertical: AppSizes.xs),
+                    child: Text(
+                      '25%',
+                      style: Theme.of(context)
+                          .textTheme
+                          .labelLarge!
+                          .apply(color: MyColors.black),
+                    ),
                   ),
                 ),
 
                 /// Favourite icon button
                 const Positioned(
-                  top: 0,
+                    top: 0,
                     right: 0,
-                    child: CircularIcon(icon: Iconsax.heart5, color: Colors.red,))
+                    child: CircularIcon(
+                      icon: Iconsax.heart5,
+                      color: Colors.red,
+                    ))
               ],
             ),
           )
+
           /// Details
         ],
       ),
-
     );
   }
 }
-
-
