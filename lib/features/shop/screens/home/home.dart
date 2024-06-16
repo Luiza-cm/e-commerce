@@ -57,6 +57,7 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.all(AppSizes.defaultSpace),
             child: Column(
               children: [
+                /// Promo slider banners
                 const PromoSlider(
                   banners: [
                     AppImages.promoBanner1,
@@ -64,7 +65,11 @@ class HomeScreen extends StatelessWidget {
                     AppImages.promoBanner3
                   ],
                 ),
+                /// Heading
+                AppSectionHeading(title: 'Popular Products', onPressed: (){},),
                 const SizedBox(height: AppSizes.spaceBtwSections),
+
+                /// Grid Layout products
                 GridLayout(
                   itemCount: 4,
                   itemBuilder: (_, index) => const ProductCardVertical(),

@@ -100,31 +100,34 @@ class ProductCardVertical extends StatelessWidget {
                         )
                       ],
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const ProductPriceText(
-                          price: '89,90',
-                        ),
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: MyColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(AppSizes.cardRadiusMd),
-                                bottomLeft: Radius.circular(
-                                    AppSizes.productImageRadius)),
-                          ),
-                          child: const SizedBox(
-                              width: AppSizes.iconLg * 1.2,
-                              height: AppSizes.iconLg * 1.2,
-                              child: Center(
-                                  child: Icon(Iconsax.add,
-                                      color: MyColors.white))),
-                        )
-                      ],
-                    )
                   ],
-                ))
+                )),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: AppSizes.sm),
+                  child: ProductPriceText(
+                    price: '89,90',
+                  ),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    color: MyColors.dark,
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(AppSizes.cardRadiusMd),
+                        bottomLeft:
+                            Radius.circular(AppSizes.productImageRadius)),
+                  ),
+                  child: const SizedBox(
+                      width: AppSizes.iconLg * 1.2,
+                      height: AppSizes.iconLg * 1.2,
+                      child: Center(
+                          child: Icon(Iconsax.add, color: MyColors.white))),
+                )
+              ],
+            ),
           ],
         ),
       ),

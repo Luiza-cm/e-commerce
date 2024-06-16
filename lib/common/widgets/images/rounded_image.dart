@@ -10,7 +10,7 @@ class RoundedImage extends StatelessWidget {
     this.height,
     this.applyImageRadius = true,
     this.border,
-    this.backgroundColor = MyColors.light,
+    this.backgroundColor,
     this.fit,
     this.padding,
     this.isNetworkImage = false,
@@ -22,7 +22,7 @@ class RoundedImage extends StatelessWidget {
   final double? width, height;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;
