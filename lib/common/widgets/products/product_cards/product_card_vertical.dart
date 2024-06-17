@@ -3,6 +3,7 @@ import 'package:flutter_learnings/common/styles/shadows.dart';
 import 'package:flutter_learnings/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_learnings/common/widgets/icons/circular_icon.dart';
 import 'package:flutter_learnings/common/widgets/images/rounded_image.dart';
+import 'package:flutter_learnings/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:flutter_learnings/common/widgets/texts/product_price_text.dart';
 import 'package:flutter_learnings/common/widgets/texts/product_title_text.dart';
 import 'package:flutter_learnings/utils/constants/colors.dart';
@@ -73,33 +74,18 @@ class ProductCardVertical extends StatelessWidget {
             const SizedBox(height: AppSizes.spaceBtwItems / 2),
 
             /// Details
-            Padding(
-                padding: const EdgeInsets.only(left: AppSizes.sm),
+            const Padding(
+                padding: EdgeInsets.only(left: AppSizes.sm),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const ProductTitleText(
+                    ProductTitleText(
                       title: 'Bota Coturno Cano Baixo',
                       textAlign: TextAlign.left,
                       smallSize: true,
                     ),
-                    const SizedBox(height: AppSizes.spaceBtwItems / 2),
-                    Row(
-                      children: [
-                        Text(
-                          'Schultz',
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                        const SizedBox(width: AppSizes.xs),
-                        const Icon(
-                          Iconsax.verify5,
-                          color: MyColors.primary,
-                          size: AppSizes.iconXs,
-                        )
-                      ],
-                    ),
+                    SizedBox(height: AppSizes.spaceBtwItems / 2),
+                    BrandTitleTextWithVerifiedIcon(title: 'Nike'),
                   ],
                 )),
             const Spacer(),
