@@ -69,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                 AppSectionHeading(title: 'Popular Products', onPressed: (){},),
                 const SizedBox(height: AppSizes.spaceBtwSections),
 
-                /// Grid Layout products
+                /// Grid Layout products - Popular products
                 GridLayout(
                   itemCount: 4,
                   itemBuilder: (_, index) => const ProductCardVertical(),
