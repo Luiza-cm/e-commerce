@@ -4,16 +4,12 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_learnings/common/widgets/appbar/appbar.dart';
 import 'package:flutter_learnings/common/widgets/appbar/tabbar.dart';
 import 'package:flutter_learnings/common/widgets/brands/brand_card.dart';
-import 'package:flutter_learnings/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_learnings/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:flutter_learnings/common/widgets/images/circular_image.dart';
 import 'package:flutter_learnings/common/widgets/layouts/grid.layout.dart';
 import 'package:flutter_learnings/common/widgets/products/cart/cart_menu_icon.dart';
-import 'package:flutter_learnings/common/widgets/texts/brand_title_text_with_verified_icon.dart';
 import 'package:flutter_learnings/common/widgets/texts/section_heading.dart';
+import 'package:flutter_learnings/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:flutter_learnings/utils/constants/colors.dart';
-import 'package:flutter_learnings/utils/constants/enums.dart';
-import 'package:flutter_learnings/utils/constants/image_strings.dart';
 import 'package:flutter_learnings/utils/constants/sizes.dart';
 import 'package:flutter_learnings/utils/helpers/helper_functions.dart';
 
@@ -86,67 +82,12 @@ class StoreScreen extends StatelessWidget {
                   ])),
             ];
           },
-          body: TabBarView(children: [
-            Padding(
-              padding: const EdgeInsets.all(AppSizes.defaultSpace),
-              child: Column(
-                children: [
-                  /// Brands
-                  RoundedContainer(
-                    showBorder: true,
-                    borderColor: MyColors.darkerGrey,
-                    backgroundColor: Colors.transparent,
-                    margin:
-                        const EdgeInsets.only(bottom: AppSizes.spaceBtwItems),
-                    child: Column(
-                      children: [
-                        /// Btand with products count
-                        const BrandCard(showBorder: true),
-
-                        /// Brand top 3 products images
-                        Row(
-                          children: [
-                            Expanded(
-                                child: RoundedContainer(
-                              height: 100,
-                              backgroundColor:
-                                  dark ? MyColors.darkerGrey : MyColors.light,
-                              margin: const EdgeInsets.only(right: AppSizes.sm),
-                              padding: const EdgeInsets.all(AppSizes.md),
-                              child: const Image(
-                                  fit: BoxFit.contain,
-                                  image: AssetImage(AppImages.productImage4)),
-                            )),
-                            Expanded(
-                                child: RoundedContainer(
-                                  height: 100,
-                                  backgroundColor:
-                                  dark ? MyColors.darkerGrey : MyColors.light,
-                                  margin: const EdgeInsets.only(right: AppSizes.sm),
-                                  padding: const EdgeInsets.all(AppSizes.md),
-                                  child: const Image(
-                                      fit: BoxFit.contain,
-                                      image: AssetImage(AppImages.productImage4)),
-                                )),
-                            Expanded(
-                                child: RoundedContainer(
-                                  height: 100,
-                                  backgroundColor:
-                                  dark ? MyColors.darkerGrey : MyColors.light,
-                                  margin: const EdgeInsets.only(right: AppSizes.sm),
-                                  padding: const EdgeInsets.all(AppSizes.md),
-                                  child: const Image(
-                                      fit: BoxFit.contain,
-                                      image: AssetImage(AppImages.productImage4)),
-                                )),
-                          ],
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
+          body: const TabBarView(children: [
+            CategoryTab(),
+            CategoryTab(),
+            CategoryTab(),
+            CategoryTab(),
+            CategoryTab(),
           ]),
         ),
       ),
