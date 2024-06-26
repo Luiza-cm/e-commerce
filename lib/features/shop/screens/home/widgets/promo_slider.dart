@@ -4,10 +4,8 @@ import 'package:flutter_learnings/common/widgets/custom_shapes/containers/circul
 import 'package:flutter_learnings/common/widgets/images/rounded_image.dart';
 import 'package:flutter_learnings/features/shop/controllers/home_controller.dart';
 import 'package:flutter_learnings/utils/constants/colors.dart';
-import 'package:flutter_learnings/utils/constants/image_strings.dart';
 import 'package:flutter_learnings/utils/constants/sizes.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 
 class PromoSlider extends StatelessWidget {
   const PromoSlider({

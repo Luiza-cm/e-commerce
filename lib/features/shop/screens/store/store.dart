@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_learnings/common/widgets/appbar/appbar.dart';
 import 'package:flutter_learnings/common/widgets/appbar/tabbar.dart';
 import 'package:flutter_learnings/common/widgets/brands/brand_card.dart';

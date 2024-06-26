@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learnings/utils/constants/colors.dart';
-import 'package:flutter_learnings/utils/constants/sizes.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../utils/constants/enums.dart';
 
