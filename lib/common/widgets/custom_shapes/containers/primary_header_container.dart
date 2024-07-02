@@ -16,29 +16,25 @@ class AppPrimaryHeaderContainer extends StatelessWidget {
     return AppCurvedEdgeWidget(
       child: Container(
         color: MyColors.primary,
-        padding: const EdgeInsets.all(0),
-        child: SizedBox(
-          height: 400,
-          child: Stack(
-            children: <Widget>[
-              /// Background custom shape
-              Positioned(
-                top: -150,
-                right: -250,
-                child: CircularContainerDesign(
-                  backgroundColor: MyColors.textWhite.withOpacity(0.1),
-                ),
+        child: Stack(
+          children: <Widget>[
+            /// Background custom shape
+            Positioned(
+              top: -150,
+              right: -250,
+              child: CircularContainerDesign(
+                backgroundColor: MyColors.textWhite.withOpacity(0.1),
               ),
-              Positioned(
-                top: 100,
-                right: -300,
-                child: CircularContainerDesign(
-                  backgroundColor: MyColors.textWhite.withOpacity(0.1),
-                ),
+            ),
+            Positioned(
+              top: 100,
+              right: -300,
+              child: CircularContainerDesign(
+                backgroundColor: MyColors.textWhite.withOpacity(0.1),
               ),
-              child,
-            ],
-          ),
+            ),
+            child,
+          ],
         ),
       ),
     );

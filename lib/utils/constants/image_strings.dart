@@ -44,6 +44,9 @@ class AppImages {
   static const String promoBanner2 = "assets/images/banners/banner-promo2.jpg";
   static const String promoBanner3 = "assets/images/banners/banner-promo3.jpg";
 
+  // Profile
+  static const String user = "assets/images/user/user_avatar.png";
+
   // Products
   static const String productImage1 =
       "assets/images/product_images/product-1.png";
